@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ 
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="imagens/icone.jpg">
+    <title>Galinheiro</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="cabecalho">
+        <h1>Galinheiro do Lucão</h1>  
+        <a href="rafael.html">
+        <img src="imagens/tenis.jpeg"> 
+        </a>
+    </div>
+
+    <audio controls autoplay>
+        <source src="sons/sominicial.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="cagando">
+        <img id="photo" src="imagens/lucascagandocompintnascostas.jpg">
+    </div>
+
+    <div class="botao">
+        <button type="button" class="botao" id="galinha">Mágica</button> 
+    </div>
+
+    <div class="rodape">
+        <h1>Lucas cagando com o pinto nas costas (lá ele)</h1>
+    </div>
+
+</body>
+</html>
+
+<script>
+    $(document).ready(function(){
+    
+        var states = [
+            { title: 'Mágica', photo: 'imagens/lucascagandocompintnascostas.jpg' },
+            { title: 'La ele', photo: 'imagens/hum.jpg' },
+            { title: 'Lucas na gaita', photo: 'imagens/lucasnagaita.jpg' },
+        ];
+    
+        var currentIndex = 0;
+    
+        $('#galinha').on('click', function() {
+            console.log('teste')
+            currentIndex = (currentIndex + 1) % states.length;
+            $(this).html(states[currentIndex].title);
+            $('#photo').attr('src', states[currentIndex].photo);
+        });
+    });
+
+    </script>

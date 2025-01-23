@@ -1,0 +1,67 @@
+body {
+    background-color: green;
+    background-image: url('imagens/parmera.webp');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center 120px;
+    height: 70vh;
+}
+
+.cabecalho{
+    position: relative;
+}
+
+.cabecalho h1{
+    text-align: center;
+    font-family: Arial;
+    color: white;
+}
+
+.cabecalho h2{
+    text-align: center;
+    font-family: Arial;
+    color: white;
+}
+
+audio {
+    display: none; 
+}
+
+.voltar {
+    position: fixed; 
+    top: 20px; 
+    left: 20px; 
+    padding: 20px;
+    text-align: center;
+    z-index: 10; 
+}
+
+.voltar button {
+    background-color: #28a745;
+    color: white;
+    border: solid white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.voltar button:hover {
+    background-color: #218838;
+}
+
+.texto {
+    display: flex;
+    justify-content: space-between; 
+    position: fixed;
+    bottom: 0; 
+    width: 100%; 
+    padding: 10px 20px; 
+    z-index: 5;
+}
+
+.texto img {
+    max-width: 45%;
+    height: auto;
+}
